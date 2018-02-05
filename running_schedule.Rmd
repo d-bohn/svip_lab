@@ -48,6 +48,7 @@ add_dates <- function(obj, adv,
             rep(tthurs,reps[['ttrep']]), rep(tfri, reps[['frep']]))
  dates <- as.Date(dates)
  days <- weekdays(dates)
+ dates <- format(dates, format='%m/%d/%Y')
  
  df <- data.frame(day = days, date=dates)
  return(df)
