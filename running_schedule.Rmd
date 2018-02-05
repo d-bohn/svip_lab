@@ -1,0 +1,130 @@
+---
+title: "Running Schedule"
+author: "Daniel N. Albohn"
+date: "2/5/2018"
+output: 
+  html_document:
+    toc: true
+    toc_depth: 1
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+pacman::p_load(tidyverse)
+
+start <- as.Date("2018-02-05")
+
+advdate <- function(obj, adv) {
+ tmon <- obj + 7*(adv-1)
+ tfri <- obj + 4 + 7*(adv-1)
+ tmon <- format(tmon, format="%m/%d")
+ tfri <- format(tfri, format="%m/%d")
+ zadv <- sprintf("%02d", adv)
+ tmp <- paste("Week ",zadv,sep='',", ", tmon," - ",tfri)
+ return(tmp)}
+
+advdate2 <- function(obj, adv) {
+ tmon <- obj + 7*(adv-1)
+ return(tmon)}
+
+
+add_dates <- function(obj, adv, 
+           reps=c(mrep=1,trep=1,wrep=2,ttrep=1,frep=1))
+  {
+ tmon <- obj + 7*(adv-1)
+ ttues <- obj + 1 + 7*(adv-1)
+ tweds <- obj + 2 + 7*(adv-1)
+ tthurs <- obj + 3 + 7*(adv-1)
+ tfri <- obj + 4 + 7*(adv-1)
+ # tmon <- format(tmon, format="%m/%d/%y")
+ # ttues <- format(ttues, format="%m/%d/%y")
+ # tweds <- format(tweds, format="%m/%d/%y")
+ # tthurs <- format(tthurs, format="%m/%d/%y")
+ # tfri <- format(tfri, format="%m/%d/%y")
+ 
+ dates <- c(rep(tmon,reps[['mrep']]), rep(ttues,reps[['trep']]), rep(tweds,reps[['wrep']]),
+            rep(tthurs,reps[['ttrep']]), rep(tfri, reps[['frep']]))
+ dates <- as.Date(dates)
+ days <- weekdays(dates)
+ 
+ df <- data.frame(day = days, date=dates)
+ return(df)
+}
+
+add_times <- function(df, ...){
+  times <- as.character(match.call(expand.dots = TRUE))[-c(1:2)]
+  if (nrow(df) == length(times)){
+    df$time <- NULL
+    df <- cbind(df, times)
+    return(df)
+  } else{
+      stop('Dates and times do not match')
+  }
+}
+
+add_rooms <- function(df, ...){
+  rooms <- as.character(match.call(expand.dots = TRUE))[-c(1:2)]
+  if (nrow(df) == length(rooms)){
+    df$room <- NULL
+    df <- cbind(df, rooms)
+    return(df)
+  } else{
+      stop('Dates and rooms do not match')
+  }
+}
+
+add_ras <- function(df, ...){
+  ras <- as.character(match.call(expand.dots = TRUE))[-c(1:2)]
+  if (nrow(df) == length(ras)){
+    df$RA <- NULL
+    df <- cbind(df, ras)
+    return(df)
+  } else{
+      stop('Dates and RAs do not match')
+  }
+}
+
+add_studies <- function(df, ...){
+  study <- as.character(match.call(expand.dots = TRUE))[-c(1:2)]
+  if (nrow(df) == length(study)){
+    df$Study <- NULL
+    df <- cbind(df, study)
+    return(df)
+  } else{
+      stop('Dates and RAs do not match')
+  }
+}
+
+make_table <- function(df){
+  df %>% 
+    knitr::kable('html') %>% 
+    kableExtra::kable_styling(bootstrap_options = c("striped", "hover", "condensed"),
+                  full_width=FALSE, position='center') %>% 
+    kableExtra::column_spec(1, bold=TRUE, border_right = TRUE)
+}
+
+# table <- add_dates(start,1, reps = c(mrep=0,trep=2,wrep=2,ttrep=1,frep=1))
+# table2 <- add_rooms(table, 463, 463, 472, 472, 463, 463)
+# table3 <- add_ras(table2, Alyssa, Daniel, Kelley, Daniel, Alyssa, Kelley)
+# table4 <- add_times(table3, '12:00-2:00', '2:00-4:00', '2:30-5:00',
+#                     '5:00-6:30', '12:00-2:30', '9:30-12:00')
+```
+
+# `r advdate(start, 1)`
+
+```{r}
+start <- advdate2(start,1)
+add_dates(start,1, reps = c(mrep=0,trep=2,wrep=2,ttrep=1,frep=1)) %>% 
+  add_times(., '12:00-2:00', '2:00-4:00', '2:30-5:00',
+                    '5:00-6:30', '12:00-2:30', '9:30-12:00') %>% 
+  add_rooms(., 463, 463, 472, 472, 463, 463) %>% 
+  add_ras(., Alyssa, Daniel, Kelley, Daniel, Alyssa, Kelley) %>% 
+  make_table()
+```
+
+
+
+
+
