@@ -133,29 +133,31 @@ $(document).ready(function () {
 <div id="week-01-0205---0209" class="section level1">
 <h1>Week 01, 02/05 - 02/09</h1>
 <pre class="r"><code>start &lt;- advdate2(start,1)
-add_dates(start,1, reps = c(mrep=0,trep=2,wrep=2,ttrep=1,frep=1)) %&gt;% 
+add_dates(start,1, reps = c(mrep=0,trep=2,wrep=2,ttrep=2,frep=2)) %&gt;% 
   add_times(., '1:00-2:30', '2:30-4:00', '2:30-5:00',
-                    '5:00-6:30', '12:00-2:30', '9:30-12:00') %&gt;% 
-  add_rooms(., 463, 463, 472, 472, 463, 463) %&gt;% 
-  add_ras(., Alyssa, Daniel, Kelley, Daniel, Alyssa, Kelley) %&gt;% 
-  make_table()</code></pre>
+                    '5:00-6:30', '12:00-2:30', '6:30-8:00',
+            '9:30-12:00', '1:00-3:00') %&gt;% 
+  add_rooms(., 463, 463, 472, 472, 463, 472, 463, 472) %&gt;% 
+  add_ras(., Alyssa, Daniel, Kelley, Daniel, Alyssa, Dan, Kelley, Alyssa) %&gt;% 
+  make_table() %&gt;% 
+  kableExtra::row_spec(c(3:4), strikeout = TRUE)</code></pre>
 <table class="table table-striped table-hover table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
 <th style="text-align:left;">
-day
+Day
 </th>
 <th style="text-align:left;">
-date
+Date
 </th>
 <th style="text-align:left;">
-times
+Time
 </th>
 <th style="text-align:left;">
-rooms
+Room
 </th>
 <th style="text-align:left;">
-ras
+RA
 </th>
 </tr>
 </thead>
@@ -165,7 +167,7 @@ ras
 Tuesday
 </td>
 <td style="text-align:left;">
-2018-02-06
+02/06/2018
 </td>
 <td style="text-align:left;">
 1:00-2:30
@@ -182,7 +184,7 @@ Alyssa
 Tuesday
 </td>
 <td style="text-align:left;">
-2018-02-06
+02/06/2018
 </td>
 <td style="text-align:left;">
 2:30-4:00
@@ -195,36 +197,36 @@ Daniel
 </td>
 </tr>
 <tr>
-<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<td style="text-align:left;font-weight: bold;border-right:1px solid;text-decoration: line-through;">
 Wednesday
 </td>
-<td style="text-align:left;">
-2018-02-07
+<td style="text-align:left;text-decoration: line-through;">
+02/07/2018
 </td>
-<td style="text-align:left;">
+<td style="text-align:left;text-decoration: line-through;">
 2:30-5:00
 </td>
-<td style="text-align:left;">
+<td style="text-align:left;text-decoration: line-through;">
 472
 </td>
-<td style="text-align:left;">
+<td style="text-align:left;text-decoration: line-through;">
 Kelley
 </td>
 </tr>
 <tr>
-<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+<td style="text-align:left;font-weight: bold;border-right:1px solid;text-decoration: line-through;">
 Wednesday
 </td>
-<td style="text-align:left;">
-2018-02-07
+<td style="text-align:left;text-decoration: line-through;">
+02/07/2018
 </td>
-<td style="text-align:left;">
+<td style="text-align:left;text-decoration: line-through;">
 5:00-6:30
 </td>
-<td style="text-align:left;">
+<td style="text-align:left;text-decoration: line-through;">
 472
 </td>
-<td style="text-align:left;">
+<td style="text-align:left;text-decoration: line-through;">
 Daniel
 </td>
 </tr>
@@ -233,7 +235,7 @@ Daniel
 Thursday
 </td>
 <td style="text-align:left;">
-2018-02-08
+02/08/2018
 </td>
 <td style="text-align:left;">
 12:00-2:30
@@ -247,10 +249,27 @@ Alyssa
 </tr>
 <tr>
 <td style="text-align:left;font-weight: bold;border-right:1px solid;">
+Thursday
+</td>
+<td style="text-align:left;">
+02/08/2018
+</td>
+<td style="text-align:left;">
+6:30-8:00
+</td>
+<td style="text-align:left;">
+472
+</td>
+<td style="text-align:left;">
+Dan
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
 Friday
 </td>
 <td style="text-align:left;">
-2018-02-09
+02/09/2018
 </td>
 <td style="text-align:left;">
 9:30-12:00
@@ -262,8 +281,26 @@ Friday
 Kelley
 </td>
 </tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+Friday
+</td>
+<td style="text-align:left;">
+02/09/2018
+</td>
+<td style="text-align:left;">
+1:00-3:00
+</td>
+<td style="text-align:left;">
+472
+</td>
+<td style="text-align:left;">
+Alyssa
+</td>
+</tr>
 </tbody>
 </table>
+<p>Incliment weather predicted for Wednesday. No running.</p>
 </div>
 
 
