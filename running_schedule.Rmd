@@ -50,15 +50,15 @@ add_dates <- function(obj, adv,
  days <- weekdays(dates)
  dates <- format(dates, format='%m/%d/%Y')
  
- df <- data.frame(day = days, date=dates)
+ df <- data.frame(Day = days, Date=dates)
  return(df)
 }
 
 add_times <- function(df, ...){
-  times <- as.character(match.call(expand.dots = TRUE))[-c(1:2)]
-  if (nrow(df) == length(times)){
+  Time <- as.character(match.call(expand.dots = TRUE))[-c(1:2)]
+  if (nrow(df) == length(Time)){
     df$time <- NULL
-    df <- cbind(df, times)
+    df <- cbind(df, Time)
     return(df)
   } else{
       stop('Dates and times do not match')
@@ -66,10 +66,10 @@ add_times <- function(df, ...){
 }
 
 add_rooms <- function(df, ...){
-  rooms <- as.character(match.call(expand.dots = TRUE))[-c(1:2)]
-  if (nrow(df) == length(rooms)){
-    df$room <- NULL
-    df <- cbind(df, rooms)
+  Room <- as.character(match.call(expand.dots = TRUE))[-c(1:2)]
+  if (nrow(df) == length(Room)){
+    df$Room <- NULL
+    df <- cbind(df, Room)
     return(df)
   } else{
       stop('Dates and rooms do not match')
@@ -77,10 +77,10 @@ add_rooms <- function(df, ...){
 }
 
 add_ras <- function(df, ...){
-  ras <- as.character(match.call(expand.dots = TRUE))[-c(1:2)]
-  if (nrow(df) == length(ras)){
+  RA <- as.character(match.call(expand.dots = TRUE))[-c(1:2)]
+  if (nrow(df) == length(RA)){
     df$RA <- NULL
-    df <- cbind(df, ras)
+    df <- cbind(df, RA)
     return(df)
   } else{
       stop('Dates and RAs do not match')
@@ -88,10 +88,10 @@ add_ras <- function(df, ...){
 }
 
 add_studies <- function(df, ...){
-  study <- as.character(match.call(expand.dots = TRUE))[-c(1:2)]
-  if (nrow(df) == length(study)){
+  Study <- as.character(match.call(expand.dots = TRUE))[-c(1:2)]
+  if (nrow(df) == length(Study)){
     df$Study <- NULL
-    df <- cbind(df, study)
+    df <- cbind(df, Study)
     return(df)
   } else{
       stop('Dates and RAs do not match')
