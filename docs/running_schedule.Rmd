@@ -124,10 +124,15 @@ add_dates(start,1, reps = c(mrep=0,trep=2,wrep=2,ttrep=2,frep=2)) %>%
   add_rooms(., 463, 463, 472, 472, 463, 472, 463, 472) %>% 
   add_ras(., Alyssa, Daniel, Kelley, Daniel, Alyssa, Dan, Kelley, Alyssa) %>% 
   make_table() %>% 
-  kableExtra::row_spec(c(3:4), strikeout = TRUE)
+  kableExtra::row_spec(c(3:5), strikeout = TRUE)
 ```
 
 Incliment weather predicted for Wednesday. No running.
 
+# `r advdate(start, 2)`
+
+```{r}
+
+```
 
 
