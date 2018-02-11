@@ -132,7 +132,15 @@ Incliment weather predicted for Wednesday. No running.
 # `r advdate(start, 2)`
 
 ```{r}
-
+start <- advdate2(start,2)
+# 7 slots
+add_dates(start, 2 , reps = c(mrep=0,trep=2,wrep=3,ttrep=1,frep=1)) %>% 
+  add_times(., '12:00-2:00','2:00-4:00','9:30-12:00','2:00-5:00',
+            '5:00-7:00','12:00-1:30','9:30-12:00') %>% 
+  add_rooms(., 472, 472, 472, 463, 463, 463, 463) %>% 
+  add_ras(., Alyssa, Daniel, Kelley, Alyssa, Daniel, TBA, Kelley) %>% 
+  add_studies(., prptexm_sp17, prptexm_sp17, prptexm_sp17, ccae2, ccae2, ccae2, ccae2) %>% 
+  make_table()
 ```
 
 
