@@ -128,6 +128,7 @@ $(document).ready(function () {
 <ul>
 <li><a href="#week-01-0205---0209">Week 01, 02/05 - 02/09</a></li>
 <li><a href="#week-02-0212---0216">Week 02, 02/12 - 02/16</a></li>
+<li><a href="#week-03-0219---0223">Week 03, 02/19 - 02/23</a></li>
 </ul>
 </div>
 
@@ -463,6 +464,183 @@ Friday
 </td>
 <td style="text-align:left;">
 02/16/2018
+</td>
+<td style="text-align:left;">
+9:30-12:00
+</td>
+<td style="text-align:left;">
+463
+</td>
+<td style="text-align:left;">
+Kelley
+</td>
+<td style="text-align:left;">
+ccae2
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="week-03-0219---0223" class="section level1">
+<h1>Week 03, 02/19 - 02/23</h1>
+<pre class="r"><code># 7 slots
+add_dates(start, 3, reps = c(mrep=0,trep=2,wrep=3,ttrep=1,frep=1)) %&gt;% 
+  add_times(., '12:00-2:00','2:00-4:00','9:30-12:00','2:00-5:00',
+            '5:00-7:00','12:00-2:30','9:30-12:00') %&gt;% 
+  add_rooms(., 463, 463, 463, 463, 463, 463, 463) %&gt;% 
+  add_ras(., Alyssa, Daniel, Kelley, Alyssa, Daniel, Danny, Kelley) %&gt;% 
+  add_studies(., ccae2, ccae2, 'bza_I/ccae2', ccae2, ccae2, bza_I, ccae2) %&gt;% 
+  make_table()</code></pre>
+<table class="table table-striped table-hover table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Day
+</th>
+<th style="text-align:left;">
+Date
+</th>
+<th style="text-align:left;">
+Time
+</th>
+<th style="text-align:left;">
+Room
+</th>
+<th style="text-align:left;">
+RA
+</th>
+<th style="text-align:left;">
+Study
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+Tuesday
+</td>
+<td style="text-align:left;">
+02/20/2018
+</td>
+<td style="text-align:left;">
+12:00-2:00
+</td>
+<td style="text-align:left;">
+463
+</td>
+<td style="text-align:left;">
+Alyssa
+</td>
+<td style="text-align:left;">
+ccae2
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+Tuesday
+</td>
+<td style="text-align:left;">
+02/20/2018
+</td>
+<td style="text-align:left;">
+2:00-4:00
+</td>
+<td style="text-align:left;">
+463
+</td>
+<td style="text-align:left;">
+Daniel
+</td>
+<td style="text-align:left;">
+ccae2
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+Wednesday
+</td>
+<td style="text-align:left;">
+02/21/2018
+</td>
+<td style="text-align:left;">
+9:30-12:00
+</td>
+<td style="text-align:left;">
+463
+</td>
+<td style="text-align:left;">
+Kelley
+</td>
+<td style="text-align:left;">
+bza_I/ccae2
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+Wednesday
+</td>
+<td style="text-align:left;">
+02/21/2018
+</td>
+<td style="text-align:left;">
+2:00-5:00
+</td>
+<td style="text-align:left;">
+463
+</td>
+<td style="text-align:left;">
+Alyssa
+</td>
+<td style="text-align:left;">
+ccae2
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+Wednesday
+</td>
+<td style="text-align:left;">
+02/21/2018
+</td>
+<td style="text-align:left;">
+5:00-7:00
+</td>
+<td style="text-align:left;">
+463
+</td>
+<td style="text-align:left;">
+Daniel
+</td>
+<td style="text-align:left;">
+ccae2
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+Thursday
+</td>
+<td style="text-align:left;">
+02/22/2018
+</td>
+<td style="text-align:left;">
+12:00-2:30
+</td>
+<td style="text-align:left;">
+463
+</td>
+<td style="text-align:left;">
+Danny
+</td>
+<td style="text-align:left;">
+bza_I
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+Friday
+</td>
+<td style="text-align:left;">
+02/23/2018
 </td>
 <td style="text-align:left;">
 9:30-12:00
