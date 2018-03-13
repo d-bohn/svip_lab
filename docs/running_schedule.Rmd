@@ -167,3 +167,21 @@ add_dates(start, 4, reps = c(mrep=3,trep=2,wrep=3,ttrep=0,frep=1)) %>%
   add_studies(., bza_I, bza_I, bza_I, bza_I, bza_I, TBA, TBA, TBA, TBA) %>%
   make_table()
 ```
+
+
+# `r advdate(start, 5)`
+
+No running, spring break. Yay!
+
+
+# `r advdate(start, 6)`
+
+```{r}
+# 6 slots
+add_dates(start, 6, reps = c(mrep=0,trep=0,wrep=3,ttrep=2,frep=1)) %>% 
+  add_times(., '9:30-12:00', '2:00-5:00', '5:00-7:00','12:00-2:30','6:30-8:00','1:00-3:00') %>% 
+  add_rooms(., 472, 463, 463, 463, 463, 472) %>% 
+  add_ras(., Kelley, Alyssa, Dan, Alyssa, Dan, Alyssa) %>% 
+  add_studies(., bza_I_472, bza_I, bza_II, ccaeII, bza_II, TBA) %>%
+  make_table()
+```
