@@ -138,15 +138,6 @@ $(document).ready(function () {
 
 <div id="week-01-0205---0209" class="section level1">
 <h1>Week 01, 02/05 - 02/09</h1>
-<pre class="r"><code>#start &lt;- advdate2(start,1)
-add_dates(start,1, reps = c(mrep=0,trep=2,wrep=2,ttrep=2,frep=2)) %&gt;% 
-  add_times(., '1:00-2:30', '2:30-4:00', '2:30-5:00',
-                    '5:00-6:30', '12:00-2:30', '6:30-8:00',
-            '9:30-12:00', '1:00-3:00') %&gt;% 
-  add_rooms(., 463, 463, 472, 472, 463, 472, 463, 472) %&gt;% 
-  add_ras(., Alyssa, Daniel, Kelley, Daniel, Alyssa, Dan, Kelley, Alyssa) %&gt;% 
-  make_table() %&gt;% 
-  kableExtra::row_spec(c(3:5), strikeout = TRUE)</code></pre>
 <table class="table table-striped table-hover table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
@@ -310,14 +301,6 @@ Alyssa
 </div>
 <div id="week-02-0212---0216" class="section level1">
 <h1>Week 02, 02/12 - 02/16</h1>
-<pre class="r"><code># 7 slots
-add_dates(start, 2 , reps = c(mrep=0,trep=2,wrep=3,ttrep=1,frep=1)) %&gt;% 
-  add_times(., '12:00-2:00','2:00-4:00','9:30-12:00','2:00-5:00',
-            '5:00-7:00','12:00-1:30','9:30-12:00') %&gt;% 
-  add_rooms(., 472, 472, 472, 463, 463, 463, 463) %&gt;% 
-  add_ras(., Alyssa, Daniel, Kelley, Alyssa, Daniel, TBA, Kelley) %&gt;% 
-  add_studies(., prptexm_sp17, prptexm_sp17, prptexm_sp17, ccae2, ccae2, ccae2, ccae2) %&gt;% 
-  make_table()</code></pre>
 <table class="table table-striped table-hover table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
@@ -487,14 +470,6 @@ ccae2
 </div>
 <div id="week-03-0219---0223" class="section level1">
 <h1>Week 03, 02/19 - 02/23</h1>
-<pre class="r"><code># 7 slots
-add_dates(start, 3, reps = c(mrep=0,trep=2,wrep=3,ttrep=1,frep=1)) %&gt;% 
-  add_times(., '12:00-2:00','2:00-4:00','9:30-12:00','2:00-5:00',
-            '5:00-7:00','12:00-2:30','9:30-12:00') %&gt;% 
-  add_rooms(., 463, 463, 463, 463, 463, 463, 463) %&gt;% 
-  add_ras(., Alyssa, Daniel, Kelley, Alyssa, Daniel, Danny, Kelley) %&gt;% 
-  add_studies(., ccae2, ccae2, 'bza_I/ccae2', ccae2, ccae2, bza_I, ccae2) %&gt;% 
-  make_table()</code></pre>
 <table class="table table-striped table-hover table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
@@ -664,14 +639,6 @@ ccae2
 </div>
 <div id="week-04-0226---0302" class="section level1">
 <h1>Week 04, 02/26 - 03/02</h1>
-<pre class="r"><code># 9 slots
-add_dates(start, 4, reps = c(mrep=3,trep=2,wrep=3,ttrep=0,frep=1)) %&gt;% 
-  add_times(., '9:30-10:30','1:00-3:00','5:00-7:00','12:00-2:00','2:00-4:00',
-            '9:30-11:30','3:00-5:00','5:00-7:00', '9:30-12:00') %&gt;% 
-  add_rooms(., 463, 472, 463, 463, 463, 463, 472, 472, 463) %&gt;% 
-  add_ras(., Kelley, Alyssa, Dan, Alyssa, Dan, Kelley, Alyssa, Dan, Kelley) %&gt;% 
-  add_studies(., bza_I, bza_I, bza_I, bza_I, bza_I, TBA, TBA, TBA, TBA) %&gt;%
-  make_table()</code></pre>
 <table class="table table-striped table-hover table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
@@ -885,13 +852,6 @@ TBA
 </div>
 <div id="week-06-0312---0316" class="section level1">
 <h1>Week 06, 03/12 - 03/16</h1>
-<pre class="r"><code># 6 slots
-add_dates(start, 6, reps = c(mrep=0,trep=0,wrep=3,ttrep=2,frep=1)) %&gt;% 
-  add_times(., '9:30-12:00', '2:00-5:00', '5:00-7:00','12:00-2:30','6:30-8:00','1:00-3:00') %&gt;% 
-  add_rooms(., 472, 463, 463, 463, 463, 472) %&gt;% 
-  add_ras(., Kelley, Alyssa, Dan, Alyssa, Dan, Alyssa) %&gt;% 
-  add_studies(., bza_I_472, bza_I, bza_II, ccae2, bza_II, TBA) %&gt;%
-  make_table()</code></pre>
 <table class="table table-striped table-hover table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
@@ -1041,14 +1001,6 @@ TBA
 </div>
 <div id="week-07-0319---0323" class="section level1">
 <h1>Week 07, 03/19 - 03/23</h1>
-<pre class="r"><code># 8 slots
-add_dates(start, 7, reps = c(mrep=1,trep=2,wrep=3,ttrep=1,frep=1)) %&gt;% 
-  add_times(., '5:00-8:00', '12:00-2:00', '2:00-4:00','9:30-12:00',
-            '2:00-5:00', '5:00-7:00','12:00-2:30','9:30-12:00') %&gt;% 
-  add_rooms(., 463, 472, 472, 463, 463, 463, 463, 463) %&gt;% 
-  add_ras(., Dan, Alyssa, Kelley, Kelley, Alyssa, Dan, Alyssa, Dan) %&gt;% 
-  add_studies(., ccae2, ahs_II_472, ahs_II_472, bza_II, ccae2, ccae2, ccae2, bza_II) %&gt;%
-  make_table()</code></pre>
 <table class="table table-striped table-hover table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
@@ -1101,27 +1053,7 @@ Tuesday
 03/20/2018
 </td>
 <td style="text-align:left;">
-12:00-2:00
-</td>
-<td style="text-align:left;">
-472
-</td>
-<td style="text-align:left;">
-Alyssa
-</td>
-<td style="text-align:left;">
-ahs_II_472
-</td>
-</tr>
-<tr>
-<td style="text-align:left;font-weight: bold;border-right:1px solid;">
-Tuesday
-</td>
-<td style="text-align:left;">
-03/20/2018
-</td>
-<td style="text-align:left;">
-2:00-4:00
+12:00-4:00
 </td>
 <td style="text-align:left;">
 472
@@ -1227,10 +1159,30 @@ Friday
 463
 </td>
 <td style="text-align:left;">
-Dan
+Kelley
 </td>
 <td style="text-align:left;">
 bza_II
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;border-right:1px solid;">
+Friday
+</td>
+<td style="text-align:left;">
+03/23/2018
+</td>
+<td style="text-align:left;">
+1:00-3:00
+</td>
+<td style="text-align:left;">
+463
+</td>
+<td style="text-align:left;">
+Alyssa
+</td>
+<td style="text-align:left;">
+TBA
 </td>
 </tr>
 </tbody>
