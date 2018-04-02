@@ -182,7 +182,7 @@ add_dates(start, 6, reps = c(mrep=0,trep=0,wrep=3,ttrep=2,frep=1)) %>%
   add_times(., '9:30-12:00', '2:00-5:00', '5:00-7:00','12:00-2:30','6:30-8:00','1:00-3:00') %>% 
   add_rooms(., 472, 463, 463, 463, 463, 472) %>% 
   add_ras(., Kelley, Alyssa, Dan, Alyssa, Dan, Alyssa) %>% 
-  add_studies(., bza_I_472, bza_I, bza_II, ccae2, bza_II, TBA) %>%
+  add_studies(., bza_I_472, bza_I, bza_I, ccae2, bza_I, TBA) %>%
   make_table()
 ```
 
@@ -195,9 +195,24 @@ add_dates(start, 7, reps = c(mrep=1,trep=1,wrep=3,ttrep=1,frep=2)) %>%
             '5:00-7:00','12:00-2:30','9:30-12:00', '1:00-3:00') %>% 
   add_rooms(., 463, 472, 463, 463, 463, 463, 463, 463) %>% 
   add_ras(., Dan, Kelley, Kelley, Alyssa, Dan, Alyssa, Kelley, Alyssa) %>% 
-  add_studies(., ccae2, ahs_II_472, bza_II, ccae2, ccae2, ccae2, bza_II, TBA) %>%
+  add_studies(., ccae2, ahs_II_472, bza_I, ccae2, ccae2, ccae2, bza_I, TBA) %>%
   make_table()
 ```
 
+# `r advdate(start, 8)`
 
+Dan's life imploding, no formal schedule.
+
+# `r advdate(start, 9)`
+
+```{r}
+# 5 slots
+add_dates(start, 9, reps = c(mrep=0,trep=1,wrep=2,ttrep=1,frep=1)) %>% 
+  add_times(., '12:00-2:30', '9:30-12:30', '2:00-5:00',
+            '12:00-3:00','9:00-12:30') %>% 
+  add_rooms(., 463, 463, 463, 463, 463) %>% 
+  add_ras(., Alyssa, Kelley, Alyssa, Alyssa, Kelley) %>% 
+  add_studies(., ahs_II, ccae2, bza_I, ccae2, ccae2) %>%
+  make_table()
+```
 
